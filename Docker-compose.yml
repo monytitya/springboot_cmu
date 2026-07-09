@@ -1,0 +1,19 @@
+services:
+  spring_app:
+    build: .
+    container_name: spring_app
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - backend_net
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2G
+        reservations:
+          memory: 512M
+networks:
+  backend_net:
+    driver: bridge

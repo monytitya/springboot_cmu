@@ -1,6 +1,6 @@
 package Springboot_cmu.Usermanage_services.Dto;
 
-public class UserDto { // Data Transfer Object for API response
+public class UserDto {
     private final String name;
     private final String email;
 
